@@ -2,35 +2,15 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <img width="300" alt="Angular Logo"
-       src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYX<!-k0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
 
-<div>
-  <label for="first-name">First name: </label>
-  <input type="text" id="first-name" value="Nick"/>
-</div>
+<nav>
+  <a routerLink="/">Home</a>
+  <a routerLink="/basic-input-elements">Basic input elements</a>
+</nav>
 
-<div>
-  <label for="last-name">Last name: </label>
-  <span id="last-name" class="last-name">Protractor</span>
-</div>
+<hr>
 
-<div>
-  <label for="address">Address</label>
-  <input type="text" id="address" value="Earth" disabled/>
-</div>
+<router-outlet></router-outlet>
 
-<div>
-  <input type="checkbox" id="aCheckbox" checked/>
-  <label for="aCheckbox">Is Checked?</label>
-</div>
 
-<div>
-  <label for="aList">Some options</label>
-  <select id="aList" name="aList">
-    <option value="Fair" selected>Fair</option>
-    <option value="Good">Good</option>
-    <option value="Excellent">Excellent</option>
-  </select>
-</div>
