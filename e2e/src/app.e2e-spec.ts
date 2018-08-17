@@ -9,22 +9,22 @@ describe('A simple App', () => {
   });
 
   it('First name should be Nick', () => {
-    expect(page.getFirstNameText()).toEqual('');
+    expect(page.firstNameTextInput().getText()).toEqual('');
   });
 
   it('Last name should be Protractor', () => {
-    expect(page.getLastNameText()).toEqual('Protractor');
+    expect(page.lastNameTextInput().getText()).toEqual('Protractor');
   });
 
   it('Address input should be disabled', () => {
-    expect(page.getAddressStatus()).toBe('true');
+    expect(page.addressTextInput().getAttribute('disabled')).toBe('true');
   });
 
   it('Check box should be checked', () => {
-    expect(page.getCheckBoxSelection()).toBe(true);
+    expect(page.aCheckBox().isSelected()).toBe(true);
   });
 
   it('List selection value should be Fair', () => {
-    expect(page.getListSelection()).toEqual('Fair');
+    expect(page.aList().getAttribute('value')).toEqual('Fair');
   });
 });

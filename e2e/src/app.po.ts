@@ -5,23 +5,23 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getFirstNameText() {
-    return element(by.id('first-name')).getText();
+  firstNameTextInput() {
+    return element(by.id('first-name'));
   }
 
-  getLastNameText() {
-    return element(by.className('last-name')).getText();
+  lastNameTextInput() {
+    return element(by.className('last-name'));
   }
 
-  getAddressStatus() {
-    return element(by.id('address')).getAttribute('disabled');
+  addressTextInput() {
+    return element(by.id('address'));
   }
 
-  getCheckBoxSelection() {
-    return element(by.id('isChecked')).isSelected();
+  aCheckBox() {
+    return element(by.id('aCheckbox'));
   }
 
-  getListSelection() {
-    return element(by.id('aList')).getAttribute('value');
+  aList() {
+    return element(by.id('aList'));
   }
 }
