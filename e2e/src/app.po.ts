@@ -1,8 +1,8 @@
 import {browser, by, element} from 'protractor';
 
 export class AppPage {
-  navigateTo() {
-    return browser.get('/');
+  navigateTo(route) {
+    return browser.get(route);
   }
 
   firstNameTextInput() {

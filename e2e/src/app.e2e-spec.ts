@@ -5,7 +5,7 @@ describe('A simple App', () => {
 
   beforeEach(() => {
     page = new AppPage();
-    page.navigateTo();
+    page.navigateTo('/');
   });
 
   it('First name should be Nick', () => {
