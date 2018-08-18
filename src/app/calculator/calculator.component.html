@@ -1,3 +1,21 @@
 <h1>{{ title }} </h1>
 
-<div></div>
+<div>
+  <label for="field1">Enter first number: </label>
+  <input type="text" id="field1" [(ngModel)]="field1"/>
+</div>
+
+<div>
+  <label for="field2">Enter second number: </label>
+  <input type="text" id="field2" [(ngModel)]="field2"/>
+</div>
+
+<div>
+  <label for="result">Result: </label>
+  <input type="text" id="result" [(ngModel)]="result"/>
+</div>
+
+<button type="button" id="button-add" (click)="add()">Add</button><br>
+<button type="button" id="button-subtract" (click)="subtract()">Subtract</button><br>
+<button type="button" id="button-multiply" (click)="multiply()">Multiply</button><br>
+<button type="button" id="button-divide" (click)="divide()">Divide</button>

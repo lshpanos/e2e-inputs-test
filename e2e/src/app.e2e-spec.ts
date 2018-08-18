@@ -8,6 +8,8 @@ describe('A simple App', () => {
     // page.navigateTo('/');
   });
 
+  // Component: basic input elements
+
   it('First name should be Nick', () => {
     page.navigateTo('basic-input-elements');
     expect(page.firstNameTextInput().getText()).toEqual('');
@@ -31,5 +33,15 @@ describe('A simple App', () => {
   it('List selection value should be Fair', () => {
     page.navigateTo('basic-input-elements');
     expect(page.aList().getAttribute('value')).toEqual('Fair');
+  });
+
+  // Component: calculator
+
+  it('Should add 2 and 5 = 7', () => {
+    page.navigateTo('calculator');
+    page.field1Input().sendKeys(2);
+    page.field2Input().sendKeys(5);
+    page.buttonAdd().click();
+    expect(page.result().getAttribute('value')).toEqual('7');
   });
 });
