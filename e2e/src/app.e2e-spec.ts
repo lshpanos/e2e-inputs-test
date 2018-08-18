@@ -44,4 +44,12 @@ describe('A simple App', () => {
     page.buttonAdd().click();
     expect(page.result().getAttribute('value')).toEqual('7');
   });
+
+  it('Should multiply 4 and 6 = 24', () => {
+    page.navigateTo('calculator');
+    page.field1Input().sendKeys(4);
+    page.field2Input().sendKeys(6);
+    page.buttonMultiply().click();
+    expect(page.result().getAttribute('value')).toEqual('24');
+  });
 });

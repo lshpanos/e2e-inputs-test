@@ -40,4 +40,8 @@ export class AppPage {
   buttonAdd() {
     return element(by.id('button-add'));
   }
+
+  buttonMultiply() {
+    return element(by.id('button-multiply'));
+  }
 }
