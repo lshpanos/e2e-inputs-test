@@ -10,34 +10,34 @@ describe('A simple App', () => {
 
   // Component: basic input elements
 
-  it('First name should be Nick', () => {
+  it('should the first name be Nick', () => {
     page.navigateTo('basic-input-elements');
     expect(page.firstNameTextInput().getText()).toEqual('');
   });
 
-  it('Last name should be Protractor', () => {
+  it('should the last name be Protractor', () => {
     page.navigateTo('basic-input-elements');
     expect(page.lastNameTextInput().getText()).toEqual('Protractor');
   });
 
-  it('Address input should be disabled', () => {
+  it('should the address input be disabled', () => {
     page.navigateTo('basic-input-elements');
     expect(page.addressTextInput().getAttribute('disabled')).toBe('true');
   });
 
-  it('Check box should be checked', () => {
+  it('should the checkbox be checked', () => {
     page.navigateTo('basic-input-elements');
     expect(page.aCheckBox().isSelected()).toBe(true);
   });
 
-  it('List selection value should be Fair', () => {
+  it('should the list selection value be Fair', () => {
     page.navigateTo('basic-input-elements');
     expect(page.aList().getAttribute('value')).toEqual('Fair');
   });
 
   // Component: calculator
 
-  it('Add 2 and 5 should equal 7', () => {
+  it('should equal 7 when add 2 + 5', () => {
     page.navigateTo('calculator');
     page.field1Input().sendKeys(2);
     page.field2Input().sendKeys(5);
@@ -45,7 +45,7 @@ describe('A simple App', () => {
     expect(page.result().getAttribute('value')).toEqual('7');
   });
 
-  it('Multiply 4 and 6 should NOT equal 25', () => {
+  it('should NOT equal 25 when multiply 4 * 6', () => {
     page.navigateTo('calculator');
     page.field1Input().sendKeys(4);
     page.field2Input().sendKeys(6);
