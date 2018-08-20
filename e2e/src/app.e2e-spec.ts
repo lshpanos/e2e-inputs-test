@@ -37,7 +37,7 @@ describe('A simple App', () => {
 
   // Component: calculator
 
-  it('Should add 2 and 5 = 7', () => {
+  it('Add 2 and 5 equals 7', () => {
     page.navigateTo('calculator');
     page.field1Input().sendKeys(2);
     page.field2Input().sendKeys(5);
@@ -45,11 +45,11 @@ describe('A simple App', () => {
     expect(page.result().getAttribute('value')).toEqual('7');
   });
 
-  it('Should multiply 4 and 6 = 24', () => {
+  it('Multiply 4 and 6 does NOT equal 25', () => {
     page.navigateTo('calculator');
     page.field1Input().sendKeys(4);
     page.field2Input().sendKeys(6);
     page.buttonMultiply().click();
-    expect(page.result().getAttribute('value')).toEqual('24');
+    expect(page.result().getAttribute('value')).not.toEqual('25');
   });
 });
