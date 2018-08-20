@@ -3,7 +3,7 @@ import {AppPage} from './app.po';
 describe('A simple App', () => {
   let page: AppPage;
 
-  beforeAll(() => {
+  beforeEach(() => {
     page = new AppPage();
     // page.navigateTo('/');
   });
