@@ -3,7 +3,7 @@ import {AppPage} from './app.po';
 describe('A simple App', () => {
   let page: AppPage;
 
-  beforeEach(() => {
+  beforeAll(() => {
     page = new AppPage();
     // page.navigateTo('/');
   });
@@ -37,7 +37,7 @@ describe('A simple App', () => {
 
   // Component: calculator
 
-  it('Add 2 and 5 equals 7', () => {
+  it('Add 2 and 5 should equal 7', () => {
     page.navigateTo('calculator');
     page.field1Input().sendKeys(2);
     page.field2Input().sendKeys(5);
@@ -45,7 +45,7 @@ describe('A simple App', () => {
     expect(page.result().getAttribute('value')).toEqual('7');
   });
 
-  it('Multiply 4 and 6 does NOT equal 25', () => {
+  it('Multiply 4 and 6 should NOT equal 25', () => {
     page.navigateTo('calculator');
     page.field1Input().sendKeys(4);
     page.field2Input().sendKeys(6);
