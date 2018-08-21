@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Post} from './post.model';
+import {timer} from 'rxjs';
 
 @Component({
   selector: 'app-blog',
@@ -19,8 +20,11 @@ export class BlogComponent implements OnInit {
   }
 
   addPost() {
-    this.posts.push(this.post);
-    this.post = {title: '', body: ''};
+    timer(10000).subscribe(() => {
+      this.posts.push(this.post);
+      this.post = {title: '', body: ''};
+    });
+
   }
 
 }
