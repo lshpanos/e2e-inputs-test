@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { BasicInputElementsComponent } from './basic-input-elements/basic-input-elements.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculatorComponent,
-    BasicInputElementsComponent
+    BasicInputElementsComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
