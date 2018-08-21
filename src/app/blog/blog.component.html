@@ -13,3 +13,10 @@
 
   <button type="button" id="submit-button" (click)="addPost()">Add</button>
 </form>
+
+<hr>
+
+<h2>Number of posts: {{ posts.length }} </h2>
+<ul *ngIf="posts !== []" id="post-list">
+  <li *ngFor="let p of posts">{{ p.title }} | {{ p.body }}</li>
+</ul>

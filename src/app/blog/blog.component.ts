@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Post} from './post.model';
 
 @Component({
   selector: 'app-blog',
@@ -8,8 +9,8 @@ import {Component, OnInit} from '@angular/core';
 export class BlogComponent implements OnInit {
 
   title = 'Blog Component';
-  post = {title: '', body: ''};
-  posts = [];
+  post: Post = {title: '', body: ''};
+  posts: Post[] = [];
 
   constructor() {
   }
@@ -18,7 +19,8 @@ export class BlogComponent implements OnInit {
   }
 
   addPost() {
-    console.log(this.post);
+    this.posts.push(this.post);
+    this.post = {title: '', body: ''};
   }
 
 }
