@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Post} from './post.model';
-import {timer} from 'rxjs';
+import {BlogService} from './blog.service';
 
 @Component({
   selector: 'app-blog',
@@ -11,20 +11,22 @@ export class BlogComponent implements OnInit {
 
   title = 'Blog Component';
   post: Post = {title: '', body: ''};
-  posts: Post[] = [];
+  posts: Post[];
 
-  constructor() {
+  constructor(private blogService: BlogService) {
   }
 
   ngOnInit() {
+    this.getPosts();
   }
 
   addPost() {
-    timer(10000).subscribe(() => {
-      this.posts.push(this.post);
-      this.post = {title: '', body: ''};
-    });
+    this.blogService.addPost(this.post);
+    this.post = {title: '', body: ''};
+  }
 
+  getPosts(): void {
+    this.blogService.getPosts().subscribe(posts => this.posts = posts);
   }
 
 }
