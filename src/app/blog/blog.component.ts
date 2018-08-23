@@ -17,15 +17,17 @@ export class BlogComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.post = {title: '', body: ''};
+    this.posts = [];
     this.getPosts();
   }
 
   addPost() {
-    this.blogService.addPost(this.post);
-    this.post = {title: '', body: ''};
+    this.blogService.addPost(this.post as Post)
+      .subscribe(post => this.posts.push(post));
   }
 
-  getPosts(): void {
+  getPosts() {
     this.blogService.getPosts().subscribe(posts => this.posts = posts);
   }
 
